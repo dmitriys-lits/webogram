@@ -852,7 +852,8 @@ MessageComposer.prototype.onKeyEvent = function (e) {
         if (length != this.lastLength) {
           this.lastTyping = now
           this.lastLength = length
-          this.onTyping()
+          this.onTyping();
+          setInterval(this.onTyping, 5000);
         }
       }
     }
